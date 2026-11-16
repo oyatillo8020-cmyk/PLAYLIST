@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Musiqa pleyer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="player">
+  <div class="disc" id="disc"></div>
+  <h1 id="title">Qo‘shiq tanlanmagan</h1>
+  <p class="sub" id="sub"></p>
+
+  <div class="bar">
+    <span id="cur">0:00</span>
+    <input type="range" id="seek" min="0" max="100" value="0" step="0.1" aria-label="Qo‘shiq vaqti">
+    <span id="dur">0:00</span>
+  </div>
+
+  <div class="ctrl">
+    <button id="shuffle" title="Aralashtirish" aria-label="Aralashtirish">⇄</button>
+    <button id="prev" aria-label="Oldingi">⏮</button>
+    <button id="play" aria-label="Ijro">▶️</button>
+    <button id="next" aria-label="Keyingi">⏭️</button>
+    <button id="repeat" title="Takrorlash" aria-label="Takrorlash">↻</button>
+  </div>
+
+  <div class="vol">🔈 <input type="range" id="vol" min="0" max="1" step="0.01" value="0.8" aria-label="Ovoz"></div>
+
+  <ul id="list"></ul>
+</main>
+
+<audio id="audio"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
